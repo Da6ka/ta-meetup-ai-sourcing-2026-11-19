@@ -60,18 +60,16 @@ for i,q in enumerate(questions):
     rule(top+72,L+32)
 c.showPage()
 header('Мой первый скилл для сорсинга')
-y = 141
+y = wrap(L, 128, 'Дома вы научите Codex расширять поисковый запрос и сохраните эту инструкцию как скилл. Начните с учебной вакансии ниже. Все примеры уже на листе.', 'Regular', 11, R - L, 14) + 9
 for i, (title, body) in enumerate(steps, 1):
-    txt(L, y, str(i), 'Bold', 12)
-    y = wrap(L + 23, y, title + ' ' + body, 'Regular', 11, R - L - 23, 15) + 11
-rule(y - 10)
-txt(L, y + 13, 'Что сказать Codex', 'Bold', 15)
-y = wrap(L, y + 36, prompt, 'Serif', 11, R - L, 15)
-y = wrap(L, y + 8, 'В проекте сохраните .agents/skills/my-sourcing-search/SKILL.md. В новом чате этого проекта напишите «Используй $my-sourcing-search» и добавьте новый бриф.', 'Regular', 10.5, R - L, 14)
-assert y < 586, 'Skill instructions overlap the exercise'
-txt(L, 598, 'Какую правку ИИ я хочу превратить в правило?', 'Bold', 12)
-rule(629)
-rule(652)
+    txt(L, y, str(i), 'Bold', 11)
+    txt(L + 20, y, title, 'Bold', 11.5)
+    y = wrap(L + 20, y + 15, body, 'Regular', 10.5, R - L - 20, 13.2) + 6
+txt(L, y + 4, 'Сообщение для шага 4', 'Bold', 12)
+y = wrap(L, y + 21, prompt, 'Regular', 10.5, R - L, 13.2)
+assert y < 614, 'Skill instructions overlap the exercise'
+txt(L, 625, 'Мой пример лишнего совпадения для проверки', 'Bold', 11)
+rule(651)
 def qr(x,y,url,side=102):
     code=QRCode(None,QRErrorCorrectLevel.M); code.addData(url); code.make()
     n=code.getModuleCount(); step=side/(n+8)
