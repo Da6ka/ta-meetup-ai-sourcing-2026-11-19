@@ -128,25 +128,25 @@ for i, (label, link) in enumerate([
 c.showPage()
 
 header('Мой первый скилл для сорсинга', size=30)
-txt(L, 137, 'Три карточки из мастер-класса', 'Bold', 15)
+txt(L, 130, 'Три карточки из мастер-класса', 'Bold', 15)
 cards = re.findall(r'^([АБВ])\. Senior Data Engineer\. (.+)$', src, re.M)
 assert len(cards) == 3
 for i, (label, value) in enumerate(cards):
-    baseline = 158 + 17 * i
+    baseline = 149 + 15 * i
     txt(L, baseline, label, 'Bold', 11)
     txt(L + 19, baseline, value, 'Regular', 11)
-rule(207)
-txt(L, 234, 'Дома: проверьте на своей вакансии', 'Bold', 15)
-y = wrap(L, 255, homework.strip().split('\n\n')[0], 'Regular', 11, R - L, 14) + 10
+rule(193)
+txt(L, 216, 'Дома: проверьте на своей вакансии', 'Bold', 15)
+y = wrap(L, 235, homework.strip().split('\n\n')[0], 'Regular', 10.5, R - L, 12.5) + 7
 for i, (title, body) in enumerate(steps, 1):
     txt(L, y, str(i), 'Bold', 12)
     txt(L + 19, y, title, 'Bold', 12)
-    y = wrap(L + 19, y + 17, body, 'Regular', 11, R - L - 19, 14) + 8
+    y = wrap(L + 19, y + 14, body, 'Regular', 10.5, R - L - 19, 12.5) + 5
 assert y < 710, f'Homework reaches worksheet area: {y}'
 rule(715)
 txt(L, 738, 'Моя вакансия', 'Bold', 11)
 rule(741, L + 95)
-txt(L, 769, 'Первый донор', 'Bold', 11)
+txt(L, 769, 'Площадка', 'Bold', 11)
 rule(772, L + 95)
 txt(L, 800, 'Что проверю', 'Bold', 11)
 rule(803, L + 95)
