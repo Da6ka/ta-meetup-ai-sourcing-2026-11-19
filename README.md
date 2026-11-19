@@ -4,6 +4,9 @@
 
 ## Для ведущей
 
+- [Редактируемая презентация с заметками ведущей (PowerPoint)](materials/spb-it-recruiter-meetup.pptx)
+- [Описание вакансии Lead Data Engineer для мастер-класса](materials/lead-data-engineer.md)
+
 - [Первоначальный сценарий и справка по вакансии](plan-ta-meetup.md)
 - [Сценарий презентации, демонстрация Codex и схема скилла](struktura-prezentatsii.md)
 
