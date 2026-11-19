@@ -12,6 +12,6 @@
 
 ## Для ведущей
 
-- [PowerPoint с заметками](materials/spb-it-recruiter-meetup.pptx) и [сценарий по слайдам](plan-ta-meetup.md). QR-код на слайде 4 совпадает с [отдельным PNG](materials/razdatka-qr.png).
+- [PowerPoint с заметками](materials/spb-it-recruiter-meetup.pptx) и [сценарий по слайдам](plan-ta-meetup.md). На слайде 4 два QR-кода: раздатка ([PNG отдельно](materials/razdatka-qr.png)) и репозиторий для практики на GitHub.
 - [Исходник отчёта Talent Intel](output/talent-intel-lead-data-engineer.md) и [данные отчёта в JSON](output/talent-intel-lead-data-engineer.json).
 - Для пересборки раздатки нужны Python 3, ReportLab 5.0.0 и системные шрифты Arial в macOS. Команда `python3 scripts/build_handout.py` пересобирает `razdatka.pdf` и записывает те же байты по прежнему адресу `ta-meetup-brief-a4.pdf`.
