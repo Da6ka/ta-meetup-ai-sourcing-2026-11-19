@@ -13,7 +13,6 @@ urls=re.findall(r'\]\((https?://[^)]+)\)',src)
 assert len(questions)==6 and len(urls)==4
 steps = re.findall(r'^\d+\. \*\*(.+?)\*\* (.+)$', src, re.M)
 assert len(steps) == 6
-prompt = re.search(r'^> (.+)$', src, re.M).group(1)
 root=Path('/System/Library/Fonts/Supplemental')
 for name,file in [('Regular','Arial.ttf'),('Bold','Arial Bold.ttf'),('Serif','Georgia.ttf')]:
     pdfmetrics.registerFont(TTFont(name,str(root/file)))
@@ -60,16 +59,12 @@ for i,q in enumerate(questions):
     rule(top+72,L+32)
 c.showPage()
 header('Мой первый скилл для сорсинга')
-y = wrap(L, 128, 'Дома вы научите Codex расширять поисковый запрос и сохраните эту инструкцию как скилл. Начните с учебной вакансии ниже. Все примеры уже на листе.', 'Regular', 11, R - L, 14) + 9
+y = wrap(L, 128, src.split('\n\n')[1], 'Regular', 11, R - L, 14) + 9
 for i, (title, body) in enumerate(steps, 1):
     txt(L, y, str(i), 'Bold', 11)
     txt(L + 20, y, title, 'Bold', 11.5)
     y = wrap(L + 20, y + 15, body, 'Regular', 10.5, R - L - 20, 13.2) + 6
-txt(L, y + 4, 'Сообщение для шага 4', 'Bold', 12)
-y = wrap(L, y + 21, prompt, 'Regular', 10.5, R - L, 13.2)
-assert y < 614, 'Skill instructions overlap the exercise'
-txt(L, 625, 'Мой пример лишнего совпадения для проверки', 'Bold', 11)
-rule(651)
+assert y < 667, f'Instructions reach QR area at {y:.1f} pt'
 def qr(x,y,url,side=102):
     code=QRCode(None,QRErrorCorrectLevel.M); code.addData(url); code.make()
     n=code.getModuleCount(); step=side/(n+8)
