@@ -1,4 +1,4 @@
-# Карта рынка: Lead Data Engineer, Valiotti Data
+# Карта рынка: Lead Data Engineer, консалтинг по данным
 
 19 ноября 2026. Исследование в Codex по [инструкции Talent Intel](https://github.com/SriniGundelli/talent-intel/blob/main/skills/talent-intel/SKILL.md).
 

@@ -75,7 +75,7 @@ Metaview Sourcing ищет по описанию роли и примерам р
 ### Слайд 13. Расширить запрос на А и Б
 
 ```text
-Ищу Lead Data Engineer в Valiotti Data. Подойдёт и senior, который сам проектировал хранилище для клиента. Проверяем один критерий: личное архитектурное решение. Исходный запрос: "Senior Data Engineer" AND "designed a BigQuery warehouse".
+Ищу Lead Data Engineer для консалтинговой команды, которая строит хранилища для международных клиентов. Подойдёт и senior, который сам проектировал хранилище для клиента. Проверяем один критерий: личное архитектурное решение. Исходный запрос: "Senior Data Engineer" AND "designed a BigQuery warehouse".
 
 А. Senior Data Engineer. Designed a BigQuery warehouse for a client.
 Б. Senior Data Engineer. Chose the BigQuery data model and defended it with the client.
