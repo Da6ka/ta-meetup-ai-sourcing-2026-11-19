@@ -2,7 +2,7 @@
 
 19 ноября 2026. Исследование в Codex по [инструкции Talent Intel](https://github.com/SriniGundelli/talent-intel/blob/main/skills/talent-intel/SKILL.md).
 
-Консалтинг по данным для международных клиентов Удалённо из любой страны, full-time B2B От 5 лет в DE, senior или lead. Самостоятельный выбор архитектуры и её защита перед клиентом. SQL, Python, BigQuery, Airflow 2, Claude Code в реальном проекте, английский B2+. До 4 000 EUR gross в месяц, full-time B2B.
+Консалтинг по данным для международных клиентов. Удалённая работа на полной занятости по B2B. Senior или Lead с опытом от пяти лет, который сам выбирал архитектуру и защищал её перед клиентом. SQL, Python, BigQuery, Airflow 2, применение ИИ для кода в реальном проекте и английский от B2. В исходном запросе к Talent Intel примером инструмента был Claude Code. Для упражнения подходит опыт с любым ИИ-инструментом для кода.
 
 ## Компании-доноры
 
@@ -21,7 +21,10 @@
 
 ## Оплата
 
-Future Mind публиковала 14 000-22 000 PLN в месяц на B2B для уровня Mid. По курсу ЕЦБ на 18 ноября (4,4118 PLN за евро) наш потолок равен примерно 17 650 PLN. Сравнение предполагает, что 4 000 EUR включают вознаграждение до личных налогов, а возможный НДС начисляется отдельно. Для сравнения, Datumo публикует 20 000-30 000 PLN без НДС на B2B для Mid/Senior Cloud Data Engineer. Нижняя граница уже выше нашего потолка. [Future Mind](https://www.atlantisjobs.pl/praca/data/experienced-data-engineer-with-gcp-11920) · [ЕЦБ](https://www.ecb.europa.eu/stats/shared/pdf/eurofxref.pdf?6dc32dd2a194e9179c83c50f19f2bc1e=) · [Datumo](https://www.datumo.io/job-offers/data-engineer-gcp)
+Условия учебной вакансии: до 4 000 евро в месяц до личных налогов на B2B, без НДС. Вилки ниже взяты из объявлений, найденных к митапу. Пересчёт округлён до десятков евро по курсу на 18 ноября 2026 года (4,4118 PLN за евро). [ЕЦБ](https://www.ecb.europa.eu/stats/shared/pdf/eurofxref.pdf?6dc32dd2a194e9179c83c50f19f2bc1e=)
+
+- **Future Mind, Data Engineer (Mid).** 14 000-22 000 PLN, примерно 3 170-4 990 евро в месяц. [Исходная вилка](https://www.atlantisjobs.pl/praca/data/experienced-data-engineer-with-gcp-11920)
+- **Datumo, Cloud Data Engineer (Mid/Senior).** 20 000-30 000 PLN, примерно 4 530-6 800 евро в месяц. Нижняя граница примерно на 530 евро выше бюджета учебной вакансии. [Вакансия](https://www.datumo.io/job-offers/data-engineer-gcp)
 
 ## С чего начать поиск
 
@@ -33,4 +36,4 @@ Future Mind публиковала 14 000-22 000 PLN в месяц на B2B дл
 
 ## Ограничения
 
-Ставка Lead в Future Mind неизвестна. Вилка относится к вакансии Mid. Опыт конкретного инженера, включая работу с Claude Code, и его ожидания проверяем отдельно. Для Datatonic, Devoteam и DoiT сопоставимой публичной B2B-вилки в этом поиске не нашли.
+Ставка Lead в Future Mind неизвестна. Вилка относится к вакансии Mid. Опыт конкретного инженера, включая применение ИИ для кода, и его ожидания проверяем отдельно. Для Datatonic, Devoteam и DoiT сопоставимой публичной B2B-вилки в этом поиске не нашли.

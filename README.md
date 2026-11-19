@@ -1,17 +1,17 @@
-# ИИ-сорсинг кандидатов
+# Как я учу ИИ искать кандидатов
 
-Материалы выступления Дарьи Ивановой на SPb IT Recruiter Meetup · Эффективный поиск 19 ноября 2026 года. Поиск разбирает вся группа. Дарья показывает запросы и профили на одном экране, участники предлагают решения вслух.
+Материалы Дарьи Ивановой для SPb IT Recruiter Meetup «Эффективный поиск», 19 ноября 2026 года. На примере Lead Data Engineer вы соберёте запрос для LinkedIn и Google, проверите его на учебных профилях в Codex и попробуете сохранить свои правила поиска в скилле.
 
-## К следующему выступлению
+## Для участников
 
-- [Презентация с заметками ведущей (PowerPoint)](materials/spb-it-recruiter-meetup.pptx)
-- [Раздатка для телефона (PDF)](https://raw.githubusercontent.com/Da6ka/ta-meetup-ai-sourcing-2026-11-19/main/output/pdf/razdatka.pdf). Перед началом покажи слайд 27 или открой [QR-код на весь экран](materials/razdatka-qr.png).
-- [Описание учебной вакансии Lead Data Engineer](materials/lead-data-engineer.md)
-- **Отчёт Talent Intel по Lead Data Engineer** · [PDF для участников](output/pdf/talent-intel-lead-data-engineer.pdf) · [Редактируемая версия (Markdown)](output/talent-intel-lead-data-engineer.md)
+1. Откройте [двустороннюю раздатку A4](output/pdf/razdatka.pdf). Её также можно [скачать на телефон](https://raw.githubusercontent.com/Da6ka/ta-meetup-ai-sourcing-2026-11-19/main/output/pdf/razdatka.pdf).
+2. Возьмите [учебную вакансию](materials/lead-data-engineer.md), [карту рынка Talent Intel](output/pdf/talent-intel-lead-data-engineer.pdf) и [пример резюме](materials/sasha.md).
+3. Скопируйте [запросы для демо](materialy-uchastnikam.md#демо-в-codex) и пройдите [домашнюю практику на своей вакансии](materialy-uchastnikam.md#мой-первый-скилл-для-сорсинга).
 
-## Сценарий и домашнее задание
+В [материалах для участников](materialy-uchastnikam.md) также есть шаблон брифа, примеры поисковых запросов и источники. Данные о ставках в отчёте относятся к дате митапа.
 
-- [План выступления и мастер-класса по слайдам](plan-ta-meetup.md)
-- [Как написать и проверить свой первый скилл для сорсинга](materialy-uchastnikam.md)
+## Для ведущей
 
-Чтобы обновить PDF после правки брифа, запусти из корня проекта `python3 scripts/build_handout.py`. Скрипт использует ReportLab и шрифты Arial и Georgia из macOS.
+- [PowerPoint с заметками](materials/spb-it-recruiter-meetup.pptx) и [сценарий по слайдам](plan-ta-meetup.md). QR-код на слайде 4 совпадает с [отдельным PNG](materials/razdatka-qr.png).
+- [Исходник отчёта Talent Intel](output/talent-intel-lead-data-engineer.md) и [данные отчёта в JSON](output/talent-intel-lead-data-engineer.json).
+- Для пересборки раздатки нужны Python 3, ReportLab 5.0.0 и системные шрифты Arial в macOS. Команда `python3 scripts/build_handout.py` пересобирает `razdatka.pdf` и записывает те же байты по прежнему адресу `ta-meetup-brief-a4.pdf`.
