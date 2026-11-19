@@ -9,10 +9,9 @@ from reportlab.graphics.barcode.qrencoder import QRCode,QRErrorCorrectLevel
 
 src=Path('materialy-uchastnikam.md').read_text()
 questions=re.findall(r'^\| ([^|]+?) \| \|$',src,re.M)
-urls=re.findall(r'\]\((https?://[^)]+)\)',src)
-assert len(questions)==6 and len(urls)==3
-demo = re.findall(r'^### (Слайд [^\n]+)\n\n```text\n(.*?)\n```', src, re.M | re.S)
-assert len(demo) == 2
+links = dict(re.findall(r'\[([^]]+)\]\((https?://[^)]+)\)', src))
+assert len(questions) == 6
+front, homework = src.split('# Мой первый скилл для сорсинга', 1)
 steps = re.findall(r'^\d+\. \*\*(.+?)\*\* (.+)$', src, re.M)
 assert len(steps) == 6
 root=Path('/System/Library/Fonts/Supplemental')
@@ -20,7 +19,7 @@ for name,file in [('Regular','Arial.ttf'),('Bold','Arial Bold.ttf'),('Serif','Ge
     pdfmetrics.registerFont(TTFont(name,str(root/file)))
 out=Path('output/pdf/razdatka.pdf')
 c=Canvas(str(out),pagesize=A4)
-c.setTitle('Бриф и первый скилл для сорсинга')
+c.setTitle('Поиск по должности и компании. Бриф и первый скилл')
 c.setAuthor('Дарья Иванова')
 W,H=A4
 L=46
@@ -50,34 +49,6 @@ def header(title):
     c.drawRightString(R, H - 43, 'Дарья Иванова')
     rule(56,weight=1.15)
     txt(L,104,title,'Bold',32)
-header('Бриф на одну вакансию')
-txt(L,137,'Кого ищем?','Bold',13)
-rule(139,L+85)
-top = 168
-for i,q in enumerate(questions):
-    txt(L,top,str(i+1).zfill(2),'Regular',10)
-    last=wrap(L+32,top,q,'Bold',11,R-L-32,14)
-    rule(last+9,L+32)
-    top = last + 32
-rule(top, weight=1)
-txt(L,top+23,'Демо в Codex','Bold',18)
-txt(L,top+41,'Отправьте сообщения по очереди в один чат.','Regular',11)
-y = top + 64
-for title,prompt in demo:
-    txt(L,y,title,'Bold',12)
-    y += 16
-    for paragraph in prompt.split('\n\n'):
-        y = wrap(L, y, paragraph, 'Regular', 10.5, R-L, 13.1) + 3
-    y += 7
-assert y - 10 < H - 28, f'Demo reaches page bottom at {y:.1f} pt'
-c.showPage()
-header('Мой первый скилл для сорсинга')
-y = wrap(L, 128, src.split('\n\n')[1], 'Regular', 11, R - L, 14) + 9
-for i, (title, body) in enumerate(steps, 1):
-    txt(L, y, str(i), 'Bold', 11)
-    txt(L + 20, y, title, 'Bold', 11.5)
-    y = wrap(L + 20, y + 15, body, 'Regular', 10.5, R - L - 20, 13.2) + 6
-assert y < 667, f'Instructions reach QR area at {y:.1f} pt'
 def qr(x,y,url,side=102):
     code=QRCode(None,QRErrorCorrectLevel.M); code.addData(url); code.make()
     n=code.getModuleCount(); step=side/(n+8)
@@ -90,14 +61,51 @@ def qr(x,y,url,side=102):
             while end<n and code.isDark(row,end): end+=1
             c.rect(x+(ix+4)*step,H-y-(row+5)*step,(end-ix)*step,step,fill=1,stroke=0)
             ix=end
-rule(670)
-txt(L, 692, 'Примеры и справка', 'Bold', 13)
-labels = ['Пример скилла', 'LinkedIn Boolean', 'Google X-ray']
-for i, (url, label) in enumerate(zip(urls, labels)):
-    x = L + i * (R - L) / len(labels)
-    qr(x, 704, url, side=82)
-    txt(x, 802, label, 'Regular', 10)
-    c.linkURL(url, (x, H - 807, x + 100, H - 704))
+header('Поиск по должности и компании')
+y = 134
+for block in front.split('\n### ')[1:]:
+    title, body = block.strip().split('\n\n', 1)
+    txt(L, y, title, 'Bold', 13)
+    y += 19
+    for paragraph in body.split('\n\n'):
+        if paragraph.startswith('[Metaview Sourcing]'):
+            continue
+        y = wrap(L, y, paragraph, 'Regular', 11, R - L, 14) + 5
+    y += 3
+assert y < 710, f'Front text reaches QR area: {y}'
+rule(712)
+for i, (label, link) in enumerate([
+    ('Скилл Talent Intel', 'Открытый скилл Talent Intel для Claude Code'),
+    ('Boolean в LinkedIn', 'Boolean в LinkedIn'),
+    ('X-ray в Google', 'поиск по сайту в Google'),
+]):
+    x = L + i * (R - L) / 3
+    url = links[link]
+    qr(x, 725, url, side=76)
+    txt(x, 818, label, 'Bold', 11)
+    c.linkURL(url, (x, H - 822, x + 130, H - 725))
+c.showPage()
+
+header('Бриф на одну вакансию')
+txt(L, 128, 'Должность', 'Bold', 11)
+rule(129, L + 69, L + 240)
+txt(L + 255, 128, 'Компания', 'Bold', 11)
+rule(129, L + 315, R)
+gap = 18
+col_width = (R - L - gap) / 2
+for i, question in enumerate(questions):
+    x = L + (i % 2) * (col_width + gap)
+    top = 153 + (i // 2) * 69
+    bottom = wrap(x, top, question, 'Regular', 10.5, col_width, 13)
+    assert bottom < top + 52
+    rule(top + 52, x, x + col_width)
+txt(L, 374, 'Дома: мой первый скилл для сорсинга', 'Bold', 18)
+y = wrap(L, 396, homework.strip().split('\n\n')[0], 'Regular', 10.5, R - L, 13) + 7
+for i, (title, body) in enumerate(steps, 1):
+    txt(L, y, str(i), 'Bold', 11)
+    txt(L + 19, y, title, 'Bold', 11)
+    y = wrap(L + 19, y + 14, body, 'Regular', 10.5, R - L - 19, 12.5) + 5
+assert y < H - 18, f'Homework reaches page bottom: {y}'
 c.showPage()
 c.save()
 # Keep the download link already shared with the organiser working.
