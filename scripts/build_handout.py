@@ -70,7 +70,9 @@ for block in front.split('\n### ')[1:]:
     for paragraph in body.split('\n\n'):
         if paragraph.startswith('[Metaview Sourcing]'):
             continue
-        y = wrap(L, y, paragraph, 'Regular', 11, R - L, 14) + 5
+        is_query = paragraph.startswith(('("', 'site:'))
+        font = 'Bold' if is_query else 'Regular'
+        y = wrap(L, y, paragraph, font, 10.5 if is_query else 11, R - L, 13.5) + 3
     y += 3
 assert y < 710, f'Front text reaches QR area: {y}'
 rule(712)
@@ -99,12 +101,21 @@ for i, question in enumerate(questions):
     bottom = wrap(x, top, question, 'Regular', 10.5, col_width, 13)
     assert bottom < top + 52
     rule(top + 52, x, x + col_width)
-txt(L, 374, 'Дома: мой первый скилл для сорсинга', 'Bold', 18)
-y = wrap(L, 396, homework.strip().split('\n\n')[0], 'Regular', 10.5, R - L, 13) + 7
+prep = src.split('### До звонка с нанимающим менеджером\n\n', 1)[1].split('\n## ', 1)[0]
+prompt = prep.strip().split('\n\n')[1]
+url = links['Скилл для подготовки брифа']
+qr(R - 80, 349, url, side=80)
+c.linkURL(url, (R - 80, H - 429, R, H - 349))
+txt(L, 365, 'До звонка с нанимающим менеджером', 'Bold', 15)
+txt(L, 382, 'Откройте скилл по QR. После запроса вставьте описание вакансии.', 'Regular', 10)
+end = wrap(L, 399, prompt, 'Regular', 10.5, R - L - 94, 13)
+assert end < 455
+txt(L, 458, 'Дома: мой первый скилл для сорсинга', 'Bold', 18)
+y = wrap(L, 480, homework.strip().split('\n\n')[0], 'Regular', 10.5, R - L, 13) + 5
 for i, (title, body) in enumerate(steps, 1):
     txt(L, y, str(i), 'Bold', 11)
     txt(L + 19, y, title, 'Bold', 11)
-    y = wrap(L + 19, y + 14, body, 'Regular', 10.5, R - L - 19, 12.5) + 5
+    y = wrap(L + 19, y + 14, body, 'Regular', 10.5, R - L - 19, 12.5) + 2
 assert y < H - 18, f'Homework reaches page bottom: {y}'
 c.showPage()
 c.save()

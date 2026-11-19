@@ -9,6 +9,8 @@
 
 ## Для участников
 
+- [Скачать отчёт Talent Intel по Lead Data Engineer (PDF)](output/pdf/talent-intel-lead-data-engineer.pdf) · [Открыть карту рынка с источниками](output/talent-intel-lead-data-engineer.md)
+
 - [Раздатка для печати с Talent Intel, поисковыми запросами и шаблоном брифа](output/pdf/razdatka.pdf). Формат A4, масштаб 100%, двусторонняя печать с переворотом по длинной стороне.
 - [Как написать и проверить свой первый скилл для сорсинга](materialy-uchastnikam.md)
 
