@@ -1,0 +1,89 @@
+{
+  "role": "Lead Data Engineer, Valiotti Data",
+  "scope": {
+    "industry": "Консалтинг по данным для международных клиентов",
+    "geography": "Удалённо из любой страны, full-time B2B",
+    "anchor_context": "От 5 лет в DE, senior или lead. Самостоятельный выбор архитектуры и её защита перед клиентом. SQL, Python, BigQuery, Airflow 2, Claude Code в реальном проекте, английский B2+. До 4 000 EUR gross в месяц, full-time B2B."
+  },
+  "generated_at": "2026-11-19",
+  "companies": [
+    {
+      "name": "Future Mind",
+      "why": "Future Mind (Польша). Для клиента из Северной Европы команда строила платформу данных на BigQuery, Dataflow и Cloud Composer. В вакансии указаны SQL, Python и работа с заказчиком.",
+      "url": "https://jobhunt.pl/oferta/remote-experienced-data-engineer-with-gcp-future-mind-7917a8"
+    },
+    {
+      "name": "Datatonic",
+      "why": "Миграция клиентского хранилища с Netezza на BigQuery. В кейсе описаны модель данных, ETL и обучение команды клиента.",
+      "url": "https://cms.datatonic.com/app/uploads/2020/09/Datatonic-On-Prem-to-Cloud-Data-Warehouse-Migration-Whitepaper.pdf"
+    },
+    {
+      "name": "Devoteam",
+      "why": "Для сети магазинов e5 команда Devoteam переработала архитектуру приложений и потоков данных. Клиент объединил данные о покупателях, товарах и бизнесе в BigQuery.",
+      "url": "https://cloud.google.com/customers/e5"
+    },
+    {
+      "name": "DoiT",
+      "why": "Для Huq перестроили пайплайн на Google Cloud с Dataflow, BigQuery и Cloud Composer.",
+      "url": "https://www.doit.com/customers/huq"
+    },
+    {
+      "name": "Thoughtworks",
+      "why": "Модернизация платформы данных авиакомпании. Смежный пул для проверки клиентской архитектуры; владение BigQuery нужно подтвердить.",
+      "url": "https://www.thoughtworks.com/en-us/clients/data-platform-modernization"
+    },
+    {
+      "name": "Searce",
+      "why": "Для Cardinal Group команда Searce перенесла хранилище с PostgreSQL на BigQuery, адаптировала SQL и проверяла целостность данных.",
+      "url": "https://cloud.google.com/customers/cardinal-group"
+    }
+  ],
+  "talent_pools": [
+    {
+      "pool": "Консультанты BigQuery",
+      "type": "company",
+      "signal": "У Datatonic, Devoteam и Searce есть примеры миграции клиентских платформ данных. Уточните, за какие решения отвечал конкретный инженер."
+    },
+    {
+      "pool": "Apache Airflow Meetups",
+      "type": "community",
+      "signal": "Проект публикует программу сообщества. В докладах о production-пайплайнах можно искать примеры решений и оркестрации."
+    }
+  ],
+  "comp_signals": [
+    {
+      "source": "https://www.atlantisjobs.pl/praca/data/experienced-data-engineer-with-gcp-11920",
+      "range": "14 000-22 000 PLN / месяц, B2B",
+      "note": "Future Mind, Mid; вакансия со стеком GCP."
+    },
+    {
+      "source": "https://www.datumo.io/job-offers/data-engineer-gcp",
+      "range": "20 000-30 000 PLN / месяц без НДС, B2B",
+      "note": "Datumo, Mid/Senior."
+    }
+  ],
+  "sourcing_angles": [
+    {
+      "angle": "Начать с Future Mind",
+      "rationale": "Начинаем с Future Mind. Есть клиентский проект на нашем стеке, а бюджет попадает в опубликованную вилку смежной роли. Среди нынешних и бывших инженеров ищем Senior или Lead, которые сами выбрали архитектуру и защитили решение перед клиентом. В первом сообщении называем потолок. Если причина отказов в оплате, возвращаемся к заказчику с ответами кандидатов.",
+      "search_strings": [
+        "site:linkedin.com/in \"Future Mind\" \"Senior Data Engineer\"",
+        "site:linkedin.com/in \"Future Mind\" \"Lead Data Engineer\"",
+        "(\"Senior Data Engineer\" OR \"Lead Data Engineer\") AND BigQuery"
+      ]
+    }
+  ],
+  "sources": [
+    "https://cms.datatonic.com/app/uploads/2020/09/Datatonic-On-Prem-to-Cloud-Data-Warehouse-Migration-Whitepaper.pdf",
+    "https://cloud.google.com/customers/e5",
+    "https://www.doit.com/customers/huq",
+    "https://www.thoughtworks.com/en-us/clients/data-platform-modernization",
+    "https://cloud.google.com/customers/cardinal-group",
+    "https://airflow.apache.org/meetups/",
+    "https://jobhunt.pl/oferta/remote-experienced-data-engineer-with-gcp-future-mind-7917a8",
+    "https://www.atlantisjobs.pl/praca/data/experienced-data-engineer-with-gcp-11920",
+    "https://www.ecb.europa.eu/stats/shared/pdf/eurofxref.pdf?6dc32dd2a194e9179c83c50f19f2bc1e=",
+    "https://www.datumo.io/job-offers/data-engineer-gcp"
+  ],
+  "confidence_notes": "Ставка Lead в Future Mind неизвестна. Вилка относится к вакансии Mid. Опыт конкретного инженера, включая работу с Claude Code, и его ожидания проверяем отдельно. Для Datatonic, Devoteam и DoiT сопоставимой публичной B2B-вилки в этом поиске не нашли."
+}
