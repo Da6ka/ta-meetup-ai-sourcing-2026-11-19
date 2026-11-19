@@ -11,13 +11,15 @@ src=Path('materialy-uchastnikam.md').read_text()
 questions=re.findall(r'^\| ([^|]+?) \| \|$',src,re.M)
 urls=re.findall(r'\]\((https?://[^)]+)\)',src)
 assert len(questions)==6 and len(urls)==4
-prompt=re.search('Первое задание для ИИ: «(.*?)»',src).group(1)
+steps = re.findall(r'^\d+\. \*\*(.+?)\*\* (.+)$', src, re.M)
+assert len(steps) == 6
+prompt = re.search(r'^> (.+)$', src, re.M).group(1)
 root=Path('/System/Library/Fonts/Supplemental')
 for name,file in [('Regular','Arial.ttf'),('Bold','Arial Bold.ttf'),('Serif','Georgia.ttf')]:
     pdfmetrics.registerFont(TTFont(name,str(root/file)))
 out=Path('output/pdf/ta-meetup-brief-a4.pdf')
 c=Canvas(str(out),pagesize=A4)
-c.setTitle('Бриф на одну вакансию')
+c.setTitle('Бриф и первый скилл для сорсинга')
 c.setAuthor('Дарья Иванова')
 W,H=A4
 L=46
@@ -57,10 +59,19 @@ for i,q in enumerate(questions):
     rule(top+47,L+32)
     rule(top+72,L+32)
 c.showPage()
-header('От брифа к первому поиску')
-txt(L,150,'Запрос для ИИ','Bold',14)
-wrap(L,178,'«'+prompt+'»','Serif',13,R-L,20)
-rule(285)
+header('Мой первый скилл для сорсинга')
+y = 141
+for i, (title, body) in enumerate(steps, 1):
+    txt(L, y, str(i), 'Bold', 12)
+    y = wrap(L + 23, y, title + ' ' + body, 'Regular', 11, R - L - 23, 15) + 11
+rule(y - 10)
+txt(L, y + 13, 'Что сказать Codex', 'Bold', 15)
+y = wrap(L, y + 36, prompt, 'Serif', 11, R - L, 15)
+y = wrap(L, y + 8, 'В проекте сохраните .agents/skills/my-sourcing-search/SKILL.md. В новом чате этого проекта напишите «Используй $my-sourcing-search» и добавьте новый бриф.', 'Regular', 10.5, R - L, 14)
+assert y < 586, 'Skill instructions overlap the exercise'
+txt(L, 598, 'Какую правку ИИ я хочу превратить в правило?', 'Bold', 12)
+rule(629)
+rule(652)
 def qr(x,y,url,side=102):
     code=QRCode(None,QRErrorCorrectLevel.M); code.addData(url); code.make()
     n=code.getModuleCount(); step=side/(n+8)
@@ -73,22 +84,13 @@ def qr(x,y,url,side=102):
             while end<n and code.isDark(row,end): end+=1
             c.rect(x+(ix+4)*step,H-y-(row+5)*step,(end-ix)*step,step,fill=1,stroke=0)
             ix=end
-def item(y,idx,title,description):
-    side=102
-    url=urls[idx]
-    qr(R-side,y-15,url,side)
-    txt(L,y+7,title,'Bold',17)
-    wrap(L,y+32,description,'Regular',12,R-L-side-19,17)
-    c.linkURL(url,(L,H-y-11,L+pdfmetrics.stringWidth(title,'Bold',17),H-y+9))
-    c.linkURL(url,(R-side,H-y+15-side,R,H-y+15))
-item(311,0,'Карта компаний-доноров','Выберите компанию и команду. Найдите публикацию или вакансию, по которой видно, что команда решает похожую задачу.')
-item(432,1,'Как расширить запрос','Добавьте смежное название должности и сравните выдачу. Какой подходящий профиль появился только со второй попытки?')
-rule(546)
-txt(L,580,'Справка по поиску','Bold',14)
-for x,idx,title in [(L,2,'Boolean в LinkedIn'),(L+(R-L)/2,3,'Поиск по сайту в Google')]:
-    qr(x,606,urls[idx])
-    txt(x,736,title,'Bold',12)
-    c.linkURL(urls[idx],(x,H-742,x+pdfmetrics.stringWidth(title,'Bold',12),H-722))
-    c.linkURL(urls[idx],(x,H-708,x+102,H-606))
+rule(670)
+txt(L, 692, 'Примеры и справка', 'Bold', 13)
+labels = ['Карта доноров', 'Пример скилла', 'LinkedIn Boolean', 'Google X-ray']
+for i, (url, label) in enumerate(zip(urls, labels)):
+    x = L + i * (R - L) / 4
+    qr(x, 704, url, side=82)
+    txt(x, 802, label, 'Regular', 10)
+    c.linkURL(url, (x, H - 807, x + 100, H - 704))
 c.showPage()
 c.save()
