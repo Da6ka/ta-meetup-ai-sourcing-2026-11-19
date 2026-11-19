@@ -5,7 +5,7 @@
 ## К следующему выступлению
 
 - [Презентация с заметками ведущей (PowerPoint)](materials/spb-it-recruiter-meetup.pptx)
-- [Раздатка для печати (PDF)](output/pdf/razdatka.pdf). Печатай на A4 в масштабе 100%, с двух сторон, с переворотом по длинной стороне.
+- [Раздатка для телефона (PDF)](https://raw.githubusercontent.com/Da6ka/ta-meetup-ai-sourcing-2026-11-19/main/output/pdf/razdatka.pdf). Перед началом покажи слайд 27 или открой [QR-код на весь экран](materials/razdatka-qr.png).
 - [Описание учебной вакансии Lead Data Engineer](materials/lead-data-engineer.md)
 - [Отчёт Talent Intel по Lead Data Engineer (PDF)](output/pdf/talent-intel-lead-data-engineer.pdf) · [Карта рынка с источниками](output/talent-intel-lead-data-engineer.md)
 
