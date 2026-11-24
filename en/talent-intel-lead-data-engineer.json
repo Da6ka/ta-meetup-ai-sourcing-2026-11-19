@@ -1,0 +1,89 @@
+{
+  "role": "Lead Data Engineer, data consulting",
+  "scope": {
+    "industry": "Data consulting for international clients",
+    "geography": "Remote from any country, full-time B2B",
+    "anchor_context": "5+ years in data engineering at senior or lead level. Made architecture decisions independently and defended them with clients. SQL, Python, BigQuery, Airflow 2, Claude Code on a real project, and English at B2 or above. Up to EUR 4,000 per month before personal taxes on a full-time B2B contract."
+  },
+  "generated_at": "2026-11-19",
+  "companies": [
+    {
+      "name": "Future Mind",
+      "why": "The team built a data platform for a client in Northern Europe using BigQuery, Dataflow and Cloud Composer. The job ad lists SQL, Python and client work.",
+      "url": "https://jobhunt.pl/oferta/remote-experienced-data-engineer-with-gcp-future-mind-7917a8"
+    },
+    {
+      "name": "Datatonic",
+      "why": "The team moved a client warehouse from Netezza to BigQuery. The case study covers the data model, ETL and training for the client's team.",
+      "url": "https://cms.datatonic.com/app/uploads/2020/09/Datatonic-On-Prem-to-Cloud-Data-Warehouse-Migration-Whitepaper.pdf"
+    },
+    {
+      "name": "Devoteam",
+      "why": "The team redesigned the application and data flow architecture for the e5 retail chain. The client brought customer, product and business data together in BigQuery.",
+      "url": "https://cloud.google.com/customers/e5"
+    },
+    {
+      "name": "DoiT",
+      "why": "The team rebuilt a Google Cloud pipeline for Huq using Dataflow, BigQuery and Cloud Composer.",
+      "url": "https://www.doit.com/customers/huq"
+    },
+    {
+      "name": "Thoughtworks",
+      "why": "The team modernized an airline's data platform. Consider it an adjacent pool for client architecture experience and verify BigQuery separately.",
+      "url": "https://www.thoughtworks.com/en-us/clients/data-platform-modernization"
+    },
+    {
+      "name": "Searce",
+      "why": "The team moved Cardinal Group's warehouse from PostgreSQL to BigQuery, adapted the SQL and checked data integrity.",
+      "url": "https://cloud.google.com/customers/cardinal-group"
+    }
+  ],
+  "talent_pools": [
+    {
+      "pool": "BigQuery consultants",
+      "type": "company",
+      "signal": "Datatonic, Devoteam and Searce have published examples of client data platform migrations. Ask which decisions the individual engineer owned."
+    },
+    {
+      "pool": "Apache Airflow Meetups",
+      "type": "community",
+      "signal": "The project publishes a community program. Talks about production pipelines can point to orchestration work and architecture decisions."
+    }
+  ],
+  "comp_signals": [
+    {
+      "source": "https://www.atlantisjobs.pl/praca/data/experienced-data-engineer-with-gcp-11920",
+      "range": "PLN 14,000-22,000 per month, B2B",
+      "note": "Future Mind, mid-level data engineer role on GCP."
+    },
+    {
+      "source": "https://www.datumo.io/job-offers/data-engineer-gcp",
+      "range": "PLN 20,000-30,000 per month, excluding VAT, B2B",
+      "note": "Datumo, mid-level/senior."
+    }
+  ],
+  "sourcing_angles": [
+    {
+      "angle": "Start with Future Mind",
+      "rationale": "Start with Future Mind. It has a client project on the relevant stack, and the budget falls within the published range for an adjacent role. Look among current and former engineers for senior or lead candidates who chose the architecture and defended it with a client. Share the budget ceiling in the first message. If candidates decline because of pay, take their feedback to the hiring manager.",
+      "search_strings": [
+        "site:linkedin.com/in \"Future Mind\" \"Senior Data Engineer\"",
+        "site:linkedin.com/in \"Future Mind\" \"Lead Data Engineer\"",
+        "(\"Senior Data Engineer\" OR \"Lead Data Engineer\") AND BigQuery"
+      ]
+    }
+  ],
+  "sources": [
+    "https://cms.datatonic.com/app/uploads/2020/09/Datatonic-On-Prem-to-Cloud-Data-Warehouse-Migration-Whitepaper.pdf",
+    "https://cloud.google.com/customers/e5",
+    "https://www.doit.com/customers/huq",
+    "https://www.thoughtworks.com/en-us/clients/data-platform-modernization",
+    "https://cloud.google.com/customers/cardinal-group",
+    "https://airflow.apache.org/meetups/",
+    "https://jobhunt.pl/oferta/remote-experienced-data-engineer-with-gcp-future-mind-7917a8",
+    "https://www.atlantisjobs.pl/praca/data/experienced-data-engineer-with-gcp-11920",
+    "https://www.ecb.europa.eu/stats/shared/pdf/eurofxref.pdf?6dc32dd2a194e9179c83c50f19f2bc1e=",
+    "https://www.datumo.io/job-offers/data-engineer-gcp"
+  ],
+  "confidence_notes": "Future Mind's lead rate is unknown. Its published range is for a mid-level role. Verify each engineer's experience, their use of AI for coding and their rate expectations separately. The search found no comparable public B2B rate for Datatonic, Devoteam or DoiT."
+}
