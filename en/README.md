@@ -12,4 +12,6 @@ The [participant guide](participant-guide.md) includes a hiring brief template, 
 
 The [presenter guide](presenter-guide.md) includes the running order and links used during the demo. See the [changelog](CHANGELOG.md) for earlier updates.
 
+The [web version of the slides](https://ta-meetup-ai-sourcing.vercel.app/) is in Russian.
+
 [Русская версия](../README.md)
