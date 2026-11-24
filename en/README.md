@@ -14,4 +14,4 @@ The [presenter guide](presenter-guide.md) includes the running order and links u
 
 The [web version of the slides](https://ta-meetup-ai-sourcing.vercel.app/) is in Russian.
 
-[Русская версия](../README.md)
+[Русская версия](../README.md#русский)
