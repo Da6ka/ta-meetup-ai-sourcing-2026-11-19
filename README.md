@@ -4,7 +4,7 @@ Workshop materials by Daria Ivanova for [SPb IT Recruiter Meetup](https://proit-
 
 **[Try the exercise on your own role](en/participant-guide.md#my-first-sourcing-skill) · [Попробовать на своей вакансии](materialy-uchastnikam.md#мой-первый-скилл-для-сорсинга)**
 
-[English workshop guide](en/README.md) · [Описание на русском](#русский)
+[English workshop guide](en/README.md) · [Описание на русском](#русский) · [Claude Code](#адаптация-упражнения-для-claude-code)
 
 ## Workshop materials / Материалы митапа
 
@@ -25,6 +25,14 @@ The participant guide also includes a hiring brief template, sample search queri
 Материалы Дарьи Ивановой для [SPb IT Recruiter Meetup «Эффективный поиск»](https://proit-fest.timepad.ru/event/4273243/), 19 ноября 2026 года. На примере вакансии Lead Data Engineer вы соберёте запросы для LinkedIn и Google и проверите их на учебных профилях в Codex. Сохраните правила проверки в скилле. Когда начнёте поиск по новой вакансии, дайте Codex новый бриф и попросите проверить запрос по тем же правилам.
 
 Начните с презентации и раздатки в правой колонке [таблицы материалов](#workshop-materials--материалы-митапа). Затем откройте руководство участника. В нём есть шаблон брифа, примеры запросов, источники и упражнение для вашей вакансии. Данные о ставках в карте рынка относятся к дате митапа.
+
+### Адаптация упражнения для Claude Code
+
+Пройдите первые четыре шага [упражнения](materialy-uchastnikam.md#мой-первый-скилл-для-сорсинга) в Claude Code. Возьмите один критерий из своего брифа и три обезличенных профиля. У двух есть нужный опыт, описанный разными словами. В третьем похожие слова относятся к другой задаче. Сверьте с профилями фразы, которые Claude приводит в обоснование.
+
+Вместо вызова `$skill-creator` попросите Claude задать вопросы о ваших правилах проверки, показать, как он их понял, и после ваших правок сохранить их в файле `.claude/skills/my-sourcing-search/SKILL.md` в проекте. Укажите в начале файла `name: my-sourcing-search` и `description` в блоке YAML. В новой сессии этого проекта вызовите `/my-sourcing-search` с брифом, запросом и четвёртым обезличенным профилем. Заранее решите, должен ли запрос найти этот профиль, и сравните свой прогноз с результатом.
+
+[Документация Claude Code по скиллам](https://code.claude.com/docs/en/skills) · [English adaptation](en/README.md#adapting-the-exercise-to-claude-code)
 
 ## Additional resources / Дополнительные материалы
 
