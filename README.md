@@ -8,7 +8,7 @@ Workshop materials by Daria Ivanova for SPb IT Recruiter Meetup, November 19, 20
 
 | English | Русский |
 | --- | --- |
-| [Slides (PDF)](en/slides.pdf) · [PowerPoint with speaker notes](en/slides.pptx) | [Веб-презентация на русском (Vercel)](https://ta-meetup-ai-sourcing.vercel.app/) · [PowerPoint с заметками](materials/spb-it-recruiter-meetup.pptx) |
+| [Slides (PDF)](en/slides.pdf) | [Веб-презентация на русском (Vercel)](https://ta-meetup-ai-sourcing.vercel.app/) |
 | [Two-sided A4 handout (PDF)](en/handout.pdf) · [QR code](en/handout-qr.png) | [Двусторонняя раздатка A4 (PDF)](output/pdf/razdatka.pdf) · [Скачать напрямую](https://raw.githubusercontent.com/Da6ka/ta-meetup-ai-sourcing-2026-11-19/main/output/pdf/razdatka.pdf) · [QR-код](materials/razdatka-qr.png) |
 | [Participant guide](en/participant-guide.md) · [Codex prompts](en/participant-guide.md#codex-demo) · [Take-home exercise](en/participant-guide.md#my-first-sourcing-skill) | [Руководство участника](materialy-uchastnikam.md) · [Промпты для Codex](materialy-uchastnikam.md#демо-в-codex) · [Домашняя практика](materialy-uchastnikam.md#мой-первый-скилл-для-сорсинга) |
 | [Sample job description](en/lead-data-engineer.md) · [Sample resume](en/sasha.md) | [Учебная вакансия](materials/lead-data-engineer.md) · [Учебное резюме](materials/sasha.md) |

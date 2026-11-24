@@ -4,6 +4,7 @@
 
 ## Unreleased
 
+- Removed the Russian and English PowerPoint files. The slides remain available as a Russian web presentation and an English PDF.
 - Added the English workshop materials and presenter guide, with links between the Russian and English editions.
 - Linked to the meetup presentation from the README.
 - Added a GitHub practice link and QR code next to the handout on slide 4.

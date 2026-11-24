@@ -2,7 +2,7 @@
 
 Daria Ivanova, SPb IT Recruiter Meetup, November 19, 2026
 
-Open the [PowerPoint with speaker notes](slides.pptx) in presenter view. As people arrive, show the [handout QR code](handout-qr.png) on slide 4. Open the [two Codex prompts](participant-guide.md#codex-demo) before the demo.
+Open the [workshop slides (PDF)](slides.pdf). As people arrive, show the [handout QR code](handout-qr.png) on slide 4. Open the [two Codex prompts](participant-guide.md#codex-demo) before the demo.
 
 ## Talk (10 minutes)
 

@@ -2,7 +2,7 @@
 
 Дарья Иванова · SPb IT Recruiter Meetup «Эффективный поиск» · 19 ноября 2026
 
-Откройте [PowerPoint с заметками](materials/spb-it-recruiter-meetup.pptx) в режиме докладчика. Пока собирается зал, покажите [QR-код](materials/razdatka-qr.png) на слайде 4. Для демо заранее откройте [два сообщения для Codex](materialy-uchastnikam.md#демо-в-codex).
+Откройте [веб-версию презентации на русском](https://ta-meetup-ai-sourcing.vercel.app/). Пока собирается зал, покажите [QR-код](materials/razdatka-qr.png) на слайде 4. Для демо заранее откройте [два сообщения для Codex](materialy-uchastnikam.md#демо-в-codex).
 
 [English presenter guide](en/presenter-guide.md)
 
