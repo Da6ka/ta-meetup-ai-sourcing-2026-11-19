@@ -4,6 +4,8 @@
 
 Откройте [PowerPoint с заметками](materials/spb-it-recruiter-meetup.pptx) в режиме докладчика. Пока собирается зал, покажите [QR-код](materials/razdatka-qr.png) на слайде 4. Для демо заранее откройте [два сообщения для Codex](materialy-uchastnikam.md#демо-в-codex).
 
+[English presenter guide](en/presenter-guide.md)
+
 ## Доклад, 10 минут
 
 | Слайды | Что показать |

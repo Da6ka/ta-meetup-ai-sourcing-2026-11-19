@@ -8,4 +8,8 @@ Daria Ivanova's workshop materials for SPb IT Recruiter Meetup, November 19, 202
 
 The [participant guide](participant-guide.md) includes a hiring brief template, example searches and source links. Pay figures in the [market map](talent-intel-lead-data-engineer.md) reflect the research available on the meetup date.
 
+## For presenters
+
+The [presenter guide](presenter-guide.md) includes the running order and links used during the demo. See the [changelog](CHANGELOG.md) for earlier updates.
+
 [Русская версия](../README.md)
