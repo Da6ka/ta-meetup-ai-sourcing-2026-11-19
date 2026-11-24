@@ -2,9 +2,11 @@
 
 Материалы Дарьи Ивановой для SPb IT Recruiter Meetup «Эффективный поиск», 19 ноября 2026 года. На примере Lead Data Engineer вы соберёте запрос для LinkedIn и Google, проверите его на учебных профилях в Codex и попробуете сохранить свои правила поиска в скилле.
 
+[English workshop materials](en/README.md)
+
 ## Для участников
 
-[Открыть презентацию митапа](https://ta-meetup-ai-sourcing.vercel.app/)
+[Открыть веб-версию презентации на русском](https://ta-meetup-ai-sourcing.vercel.app/)
 
 1. Откройте [двустороннюю раздатку A4](output/pdf/razdatka.pdf). Её также можно [скачать на телефон](https://raw.githubusercontent.com/Da6ka/ta-meetup-ai-sourcing-2026-11-19/main/output/pdf/razdatka.pdf).
 2. Возьмите [учебную вакансию](materials/lead-data-engineer.md), [карту рынка Talent Intel](output/pdf/talent-intel-lead-data-engineer.pdf) и [пример резюме](materials/sasha.md).
