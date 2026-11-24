@@ -4,6 +4,7 @@
 
 ## Unreleased
 
+- Linked the Timepad event, made the exercise easier to find and simplified the workshop materials table.
 - Removed the Russian and English PowerPoint files. The slides remain available as a Russian web presentation and an English PDF.
 - Added the English workshop materials and presenter guide, with links between the Russian and English editions.
 - Linked to the meetup presentation from the README.
